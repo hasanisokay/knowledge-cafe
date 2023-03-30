@@ -3,6 +3,11 @@ import SingleCard from '../SingleCard/SingleCard';
 
 const BlogCard = () => {
     const [blogs, setBlog] = useState([])
+
+
+
+
+
     useEffect(()=>{
        fetch("api.json")
        .then(res=>res.json())
@@ -10,13 +15,13 @@ const BlogCard = () => {
     },[])
 
     return (
-        <div className='lg:flex lg:mx-12 lg:my-8 gap-4 mx-2 my-4'>
+        <div className='lg:flex md:flex lg:mx-12 lg:my-8 gap-4 mx-2 my-4'>
             <div className='blogs w-full flex flex-col gap-4 basis-5/6'>
                 {
-                    blogs.map(blog=> <SingleCard blog={blog} ></SingleCard>)
+                    blogs.map(blog=> <SingleCard blog={blog} key={blog.id} ></SingleCard>)
                 }
             </div>
-            <div className='lg:sticky bg-success w-full  basis-1/4'>
+            <div className='lg:sticky bg-success w-full  basis-1/4 h-96'>
                 {/* sidebar */}
                 <h1>hi</h1>
             </div>
