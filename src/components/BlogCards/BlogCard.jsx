@@ -4,17 +4,16 @@ import SingleCard from '../SingleCard/SingleCard';
 
 const BlogCard = () => {
     const [blogs, setBlog] = useState([])
-    const [bookmark, setBookmark]= useState("")
-    const [markRead, setMarkRead]= useState("")
+    const [bookmark, setBookmark]= useState([])
+    const [markRead, setMarkRead]= useState([])
     const handleMarkRead =(read_time)=>{
         console.log(read_time);
     }
     const handleBookmark =(blog_title)=>{
-
+        const newBookmark = [blog_title]
+        setBookmark([...bookmark,newBookmark])
     }
-
-
-
+    console.log(bookmark);
     useEffect(()=>{
        fetch("api.json")
        .then(res=>res.json())

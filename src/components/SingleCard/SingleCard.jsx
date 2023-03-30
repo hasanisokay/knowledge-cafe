@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleCard = (props) => {
-    console.log(props)
+
     const { author_image, blog_title, read_time, publish_date, cover_image, author_name, tags } = props.blog;
     return (
         <div>
