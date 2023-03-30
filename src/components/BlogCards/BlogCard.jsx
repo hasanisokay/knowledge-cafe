@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import SingleCard from '../SingleCard/SingleCard';
 
 const BlogCard = () => {
-    const [blog, setBlog] = useState([])
+    const [blogs, setBlog] = useState([])
     useEffect(()=>{
        fetch("api.json")
        .then(res=>res.json())
-       .then(data=>console.log(data))
+       .then(data=>setBlog(data))
     },[])
 
     return (
-        <div className='lg:flex mx-4 my-4 gap-4'>
-            <div className='blogs bg-slate-400 w-full '>
-                {/* blog part */}
-                <h1>hi</h1>
+        <div className='lg:flex lg:mx-12 lg:my-8 gap-4 mx-2 my-4'>
+            <div className='blogs w-full flex flex-col gap-4 basis-5/6'>
+                {
+                    blogs.map(blog=> <SingleCard blog={blog} ></SingleCard>)
+                }
             </div>
-            <div className='lg:sticky bg-success w-full  basis-2/12'>
+            <div className='lg:sticky bg-success w-full  basis-1/4'>
                 {/* sidebar */}
                 <h1>hi</h1>
             </div>
