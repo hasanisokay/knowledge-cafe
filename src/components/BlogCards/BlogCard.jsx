@@ -28,9 +28,9 @@ const BlogCard = () => {
                     blogs.map(blog=> <SingleCard blog={blog} key={blog.id} bookmark={handleBookmark} markRead={handleMarkRead}></SingleCard>)
                 }
             </div>
-            <div className='lg:sticky bg-success w-full  basis-1/4 h-96'>
+            <div className='w-full  basis-1/4 h-96'>
                 {/* sidebar */}
-                <Sidebar ></Sidebar>
+                <Sidebar bookmark={bookmark} markRead ={markRead} ></Sidebar>
             </div>
 
         </div>
