@@ -3,8 +3,14 @@ import SingleCard from '../SingleCard/SingleCard';
 
 const BlogCard = () => {
     const [blogs, setBlog] = useState([])
+    const [bookmark, setBookmark]= useState("")
+    const [markRead, setMarkRead]= useState("")
+    const handleMarkRead =()=>{
 
+    }
+    const handleBookmark =()=>{
 
+    }
 
 
 
