@@ -46,8 +46,7 @@ const BlogCard = () => {
                 <Blog></Blog>
             </div>
             <div className='w-full  basis-1/4 h-96'>
-                {/* sidebar */}
-                <Sidebar bookmark={bookmark} markRead={markRead} ></Sidebar>
+                <Sidebar bookmark={bookmark} markRead={markRead}></Sidebar>
             </div>
 
         </div>

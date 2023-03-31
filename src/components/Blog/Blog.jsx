@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='my-2 lg:mx-10 mx-6 w-full'>
+        <div className='my-2 lg:mx-10 mx-6'>
             <h1 className='text-xl font-bold mt-4'>1. Props vs State?</h1>
             <p className="text-lg font-semibold mb-2">Ans: Props are data that passed to the child components from parent component. Data can be from any valid Javascript data types. this is read only data, means this can only be read in the child component, cannot modify or update in child components. <br />
                 State is owned locally in a component and it update itself when any change happen. Benefit of using state is, it just adjust or change the updated part only, does not reload the entire page.

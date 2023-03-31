@@ -10,7 +10,7 @@ const Sidebar = ({bookmark, markRead}) => {
             <div className='flex flex-col bg-slate-200 rounded p-3 '>
                 <p className='text-xl font-bold'>Bookmarked Blogs: {bookmark.length}</p>
                 {
-                   bookmark.map(blogName => <SingleBlog singleBlog={blogName}></SingleBlog>)
+                   bookmark.map((blogName,index) => <SingleBlog singleBlog={blogName} key={index}></SingleBlog>)
                 }
 
             </div>
