@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import SingleCard from '../SingleCard/SingleCard';
 import Swal from 'sweetalert2'
+import Blog from '../Blog/Blog';
 const BlogCard = () => {
     const [blogs, setBlog] = useState([])
     const [bookmark, setBookmark] = useState([])
@@ -12,7 +13,7 @@ const BlogCard = () => {
     }
 
     const showAlert = (n) => {
-        const message = 'You already bookmarked this item '+ n + " times" 
+        const message = 'You already bookmarked this item '+ n + " times before." 
         Swal.fire({
                 title: "Bookmark Alert",
                 text: message,
@@ -42,6 +43,7 @@ const BlogCard = () => {
                 {
                     blogs.map(blog => <SingleCard blog={blog} key={blog.id} bookmark={handleBookmark} markRead={handleMarkRead}></SingleCard>)
                 }
+                <Blog></Blog>
             </div>
             <div className='w-full  basis-1/4 h-96'>
                 {/* sidebar */}

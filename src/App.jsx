@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import BlogCard from './components/BlogCards/BlogCard'
-import Blog from './components/Blog/Blog'
 
 
 
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <BlogCard></BlogCard>
-      <Blog></Blog>
     </div>
   )
 }
